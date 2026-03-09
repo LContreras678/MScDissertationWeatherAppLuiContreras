@@ -1,0 +1,28 @@
+﻿@page
+@model ErrorModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<!--
+Error page from the Razor pages template. 
+This is kept here in case a user finds themselves in a page that cannot be found. 
+-->
+
+<h1 class="text-danger">Error.</h1>
+<h2 class="text-danger">An error occurred while processing your request.</h2>
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>Request ID:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+
+<h3>Error page</h3>
+<div>
+    <p>Page not found.</p>
+    <div style="margin-top: 2em;">
+        <a href="/" style="color: #003366;">Return Home</a>
+    </div>
+</div>
